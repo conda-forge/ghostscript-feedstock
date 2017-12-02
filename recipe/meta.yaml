@@ -1,4 +1,4 @@
-{% set version = "9.20" %}
+{% set version = "9.22" %}
 
 package:
   name: ghostscript
@@ -6,8 +6,8 @@ package:
 
 source:
   fn: ghostscript-{{ version }}.tar.gz
-  url: https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs920/ghostscript-{{ version }}.tar.gz
-  sha256: 949b64b46ecf8906db54a94ecf83ab97534ebf946f770d3c3f283cb469cb6e14
+  url: https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs922/ghostscript-{{ version }}.tar.gz
+  sha256: 7f5f4487c0df9dce37481e4c8f192c0322e4c69f5a2ba900a7833c992331bcf4
 
 build:
   number: 0
@@ -30,3 +30,4 @@ about:
 extra:
   recipe-maintainers:
     - ocefpaf
+    - leouieda
