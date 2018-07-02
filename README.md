@@ -14,14 +14,16 @@ Summary: An interpreter for the PostScript language and for PDF.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/ghostscript-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/ghostscript-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/ghostscript-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/ghostscript-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/ghostscript-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/ghostscript-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/ghostscript-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/ghostscript-feedstock)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/ghostscript/badges/version.svg)](https://anaconda.org/conda-forge/ghostscript)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/ghostscript/badges/downloads.svg)](https://anaconda.org/conda-forge/ghostscript)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-ghostscript-green.svg)](https://anaconda.org/conda-forge/ghostscript) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ghostscript.svg)](https://anaconda.org/conda-forge/ghostscript) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/ghostscript.svg)](https://anaconda.org/conda-forge/ghostscript) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ghostscript.svg)](https://anaconda.org/conda-forge/ghostscript) |
 
 Installing ghostscript
 ======================
@@ -66,6 +68,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
