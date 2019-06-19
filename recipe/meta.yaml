@@ -11,6 +11,7 @@ source:
 
 build:
   number: 1
+  skip: True  # [win and vc<14]
 
 requirements:
   build:
