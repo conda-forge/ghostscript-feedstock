@@ -7,4 +7,5 @@ move bin\*.exe %LIBRARY_BIN%
 move bin\*.lib %LIBRARY_LIB%
 move bin\*.exp %LIBRARY_LIB%
 move Resource %LIBRARY_PREFIX%
-move fonts %LIBRARY_PREFIX%\Resource\Font
+REM I'll check on a Windows machine later where this directory lives.
+:: move fonts %LIBRARY_PREFIX%\Resource\Font
