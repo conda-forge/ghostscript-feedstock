@@ -6,5 +6,5 @@ cp bin\gswin64c.exe %LIBRARY_BIN%\gs.exe
 move bin\*.exe %LIBRARY_BIN%
 move bin\*.lib %LIBRARY_LIB%
 move bin\*.exp %LIBRARY_LIB%
-move Resource %LIBRARY_PREFIX%\share
-REM fonts
+move Resource %LIBRARY_PREFIX%
+move fonts %LIBRARY_PREFIX%\Resource\Font
