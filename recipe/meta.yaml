@@ -5,13 +5,14 @@ package:
   version: {{ version }}
 
 source:
-  fn: ghostscript-{{ version }}.tar.gz
   url: https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs922/ghostscript-{{ version }}.tar.gz
   sha256: 7f5f4487c0df9dce37481e4c8f192c0322e4c69f5a2ba900a7833c992331bcf4
+  patches:
+    - dynlink_runtime.patch  # [win]
 
 build:
-  number: 1001
-  skip: True  # [win]
+  number: 1
+  skip: True  # [win and vc<14]
 
 requirements:
   build:
