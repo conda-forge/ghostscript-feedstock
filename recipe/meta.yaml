@@ -1,4 +1,4 @@
-{% set version = "9.52" %}
+{% set version = "9.53.1" %}
 {% set nopoint = "".join(version.split(".")) %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs{{ nopoint }}/ghostscript-{{ version }}.tar.gz
-  sha256: c2501d8e8e0814c4a5aa7e443e230e73d7af7f70287546f7b697e5ef49e32176
+  sha512: 69f7bcca6c127d6d4bd5428b367c3810a3da75ae5ebd36982c62406867601b2d529d4ad188010b32cb4e1ad5b5b6655f9a57ba86e653b72a502203a4a0cd1d42
   patches:
     - dynlink_runtime.patch
 
