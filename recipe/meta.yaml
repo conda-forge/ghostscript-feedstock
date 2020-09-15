@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs{{ nopoint }}/ghostscript-{{ version }}.tar.gz
-  sha512: 69f7bcca6c127d6d4bd5428b367c3810a3da75ae5ebd36982c62406867601b2d529d4ad188010b32cb4e1ad5b5b6655f9a57ba86e653b72a502203a4a0cd1d42
+  sha256: c89652ab2cf1a43688d8055d1ae55a9814d152e4b1c77c002a32c7d83621b12a
   patches:
     - dynlink_runtime.patch
 
