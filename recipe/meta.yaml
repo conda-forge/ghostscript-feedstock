@@ -1,4 +1,6 @@
 {% set version = "9.53.3" %}
+{% set major = version.split('.')[0] %}
+{% set minor = version.split('.')[1] %}
 
 package:
   name: ghostscript
@@ -11,7 +13,7 @@ source:
     - dynlink_runtime.patch
 
 build:
-  number: 1
+  number: 2
   skip: True  # [win and vc<14]
 
 requirements:
@@ -22,7 +24,12 @@ requirements:
 
 test:
   commands:
+    - if [ ! -f ${PREFIX}/lib/libgs.so ]; then ln -s ${PREFIX}/lib/libgs.so.{{ major }} ${PREFIX}/lib/libgs.so; fi  # [linux]
+    - if [ ! -f ${PREFIX}/lib/libgs.dylib ]; then ln -s ${PREFIX}/lib/libgs.{{ major }}.dylib ${PREFIX}/lib/libgs.dylib; fi  # [osx]
     - gs --version
+    - test -f ${PREFIX}/lib/libgs${SHLIB_EXT}  # [unix]
+    - test -f ${PREFIX}/lib/libgs${SHLIB_EXT}.{{ major }}  # [unix]
+    - test -f ${PREFIX}/lib/libgs${SHLIB_EXT}.{{ major }}.{{ minor }}  # [unix]
 
 about:
   home: http://ghostscript.com/
@@ -34,3 +41,4 @@ extra:
   recipe-maintainers:
     - ocefpaf
     - leouieda
+    - tdegeus
