@@ -24,7 +24,6 @@ requirements:
 
 test:
   commands:
-    - mv libgs.dylib.{{ major }}
     - test -f ${PREFIX}/lib/libgs${SHLIB_EXT}  # [unix]
     - test -f ${PREFIX}/lib/libgs${SHLIB_EXT}.{{ major }}  # [unix]
     - test -f ${PREFIX}/lib/libgs${SHLIB_EXT}.{{ major }}.{{ minor }}  # [unix]
