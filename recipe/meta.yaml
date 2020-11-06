@@ -28,8 +28,10 @@ test:
     - if [ ! -f ${PREFIX}/lib/libgs.dylib ]; then ln -s ${PREFIX}/lib/libgs.{{ major }}.dylib ${PREFIX}/lib/libgs.dylib; fi  # [osx]
     - gs --version
     - test -f ${PREFIX}/lib/libgs${SHLIB_EXT}  # [unix]
-    - test -f ${PREFIX}/lib/libgs${SHLIB_EXT}.{{ major }}  # [unix]
-    - test -f ${PREFIX}/lib/libgs${SHLIB_EXT}.{{ major }}.{{ minor }}  # [unix]
+    - test -f ${PREFIX}/lib/libgs.so.{{ major }}  # [linux]
+    - test -f ${PREFIX}/lib/libgs.so.{{ major }}.{{ minor }}  # [linux]
+    - test -f ${PREFIX}/lib/libgs.{{ major }}.dylib  # [osx]
+    - test -f ${PREFIX}/lib/libgs.{{ major }}.{{ minor }}.dylib  # [osx]
 
 about:
   home: http://ghostscript.com/
