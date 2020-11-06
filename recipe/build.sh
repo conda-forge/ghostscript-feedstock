@@ -11,9 +11,4 @@ if [ ! -d ${PREFIX}/lib ]; then
     mkdir -p ${PREFIX}/lib
 fi
 
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    cp ./sobin/libgs.*dylib ${PREFIX}/lib/
-else
-    cp ./sobin/libgs.so* ${PREFIX}/lib/
-fi
-
+cp ./sobin/libgs.* ${PREFIX}/lib/
