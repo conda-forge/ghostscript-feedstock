@@ -10,7 +10,6 @@ source:
   url: https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs{{ version | replace(".", "") }}/ghostscript-{{ version }}.tar.gz
   sha256: 6eaf422f26a81854a230b80fd18aaef7e8d94d661485bd2e97e695b9dce7bf7f
   patches:
-    - config.patch  # [arm64]
     - dynlink_runtime.patch
 
 build:
@@ -21,6 +20,7 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - gnuconfig   # [unix]
   host:
 
 test:
