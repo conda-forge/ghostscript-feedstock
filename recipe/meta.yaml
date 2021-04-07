@@ -1,4 +1,4 @@
-{% set version = "9.53.3" %}
+{% set version = "9.54.0" %}
 {% set major = version.split('.')[0] %}
 {% set minor = version.split('.')[1] %}
 
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs{{ version | replace(".", "") }}/ghostscript-{{ version }}.tar.gz
-  sha256: 6eaf422f26a81854a230b80fd18aaef7e8d94d661485bd2e97e695b9dce7bf7f
+  sha256: 0646bb97f6f4d10a763f4919c54fa28b4fbdd3dff8e7de3410431c81762cade0
   patches:
     - dynlink_runtime.patch
 
 build:
-  number: 2
+  number: 0
   skip: True  # [win and vc<14]
 
 requirements:
