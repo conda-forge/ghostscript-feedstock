@@ -21,7 +21,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-
+    - tesseract # [osx]
 test:
   commands:
     - test -f ${PREFIX}/lib/libgs${SHLIB_EXT}  # [unix]
