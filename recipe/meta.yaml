@@ -11,7 +11,7 @@ source:
   sha256: 0646bb97f6f4d10a763f4919c54fa28b4fbdd3dff8e7de3410431c81762cade0
   patches:
     - dynlink_runtime.patch
-    - configure.patch
+    - configure.patch  # [osx]
 
 build:
   number: 0
