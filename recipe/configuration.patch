@@ -1,0 +1,27 @@
+--- ghostscript-9.54.0_original/configure	2021-03-30 09:40:28.000000000 +0200
++++ ghostscript-9.54.0/configure	2021-04-09 12:25:34.000000000 +0200
+@@ -1710,7 +1710,9 @@
+                           Default: ALL
+   --with-driversfile=FILE Drivers to support from file, separated by newlines.
+   --with-extract-dir=EXTRACT_DIR
+-
++                          Build with the specified Extract library. By default
++                          we build with Extract automatically if
++                          <ghostpdl-directory>/extract exists.
+   --with-fontpath         set font search path for gs
+   --with-tessdata         set tesseract data search path
+   --with-memory-alignment Allows setting minimum alignment for the memory
+@@ -7138,7 +7140,7 @@
+ 
+         cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+-
++#include <cstdlib>
+ int
+ main ()
+ {
+@@ -14846,4 +14848,3 @@
+   { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: unrecognized options: $ac_unrecognized_opts" >&5
+ $as_echo "$as_me: WARNING: unrecognized options: $ac_unrecognized_opts" >&2;}
+ fi
+-
