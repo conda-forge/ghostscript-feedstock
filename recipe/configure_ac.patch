@@ -1,0 +1,22 @@
+--- configure.ac	2021-03-30 09:36:33.000000000 +0200
++++ configure_updated.ac	2021-04-09 10:01:05.000000000 +0200
+@@ -864,7 +864,7 @@
+       for flag in $cxxflags_to_try ; do
+         CXXFLAGS="$CXXFLAGS $flag"
+ 
+-        AC_TRY_COMPILE(, [return 0;], [
++        AC_TRY_COMPILE([#include <cstdlib>], [return 0;], [
+                 echo "   $flag"; CXXFLAGS_TO_USE="$CXXFLAGS_TO_USE $flag"
+         ])
+ 
+@@ -2601,7 +2601,9 @@
+ # device.
+ #
+ AC_ARG_WITH([extract-dir],
+-    AC_HELP_STRING([--with-extract-dir=EXTRACT_DIR]),
++    AC_HELP_STRING([--with-extract-dir=EXTRACT_DIR],
++            [Build with the specified Extract library. By default we build with Extract automatically if <ghostpdl-directory>/extract exists.]
++            ),
+     [
+         EXTRACT_DIR="$withval"
+         AS_IF([test x"$EXTRACT_DIR" != x"no"],
