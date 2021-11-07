@@ -48,7 +48,8 @@ cp $BUILD_PREFIX/share/gnuconfig/config.* ./ijs
 ./configure \
     --prefix=${PREFIX} \
     --disable-cups \
-    --without-tesseract
+    --without-tesseract \
+    --disable-dependency-tracking
 
 make -j${CPU_COUNT}
 make so -j${CPU_COUNT}
