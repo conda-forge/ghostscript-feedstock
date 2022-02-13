@@ -167,6 +167,3 @@ Feedstock Maintainers
 * [@ocefpaf](https://github.com/ocefpaf/)
 * [@tdegeus](https://github.com/tdegeus/)
 
-
-<!-- dummy commit to enable rerendering -->
-
