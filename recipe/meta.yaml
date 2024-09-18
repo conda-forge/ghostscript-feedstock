@@ -19,6 +19,7 @@ requirements:
     - make       # [unix]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - {{ stdlib('c') }}
 
 test:
   commands:
