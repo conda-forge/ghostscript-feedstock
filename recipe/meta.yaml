@@ -25,8 +25,10 @@ test:
   commands:
     - gs --version
     - test -f ${PREFIX}/lib/libgs${SHLIB_EXT}  # [unix]
-    - test -f ${PREFIX}/lib/libgs${SHLIB_EXT}.{{ major }}  # [unix]
-    - test -f ${PREFIX}/lib/libgs${SHLIB_EXT}.{{ major }}.{{ minor }}  # [unix]
+    - test -f ${PREFIX}/lib/libgs${SHLIB_EXT}.{{ major }}  # [linux]
+    - test -f ${PREFIX}/lib/libgs${SHLIB_EXT}.{{ major }}.{{ minor }}  # [linux]
+    - test -f ${PREFIX}/lib/libgs.{{ major }}${SHLIB_EXT}  # [osx]
+    - test -f ${PREFIX}/lib/libgs.{{ major }}.{{ minor }}${SHLIB_EXT}  # [osx]    
 
 about:
   home: http://ghostscript.com/
