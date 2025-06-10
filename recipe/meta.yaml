@@ -1,4 +1,4 @@
-{% set version = "10.05.0" %}
+{% set version = "10.05.1" %}
 {% set major = version.split('.')[0] %}
 {% set minor = version.split('.')[1] %}
 
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs{{ version | replace(".", "") }}/ghostscript-{{ version }}.tar.gz
-  sha256: 56e77833de683825c420d0af8cb90aa8ba7da71ea6fb5624290cbc1b53fe7942
+  sha256: c0be073366d19471320dce13e210b4c47e14b01070d6cf3d2d6d6e8415344615
 
 build:
   number: 0
