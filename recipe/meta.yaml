@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs{{ version | replace(".", "") }}/ghostscript-{{ version }}.tar.gz
-  sha256: c0be073366d19471320dce13e210b4c47e14b01070d6cf3d2d6d6e8415344615
+  sha256: 121861b6d29b2461dec6575c9f3cab665b810bd408d4ec02c86719fa708b0a49
 
 build:
   number: 0
